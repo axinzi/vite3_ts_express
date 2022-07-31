@@ -1,9 +1,11 @@
-/* eslint-disable camelcase */
-export default class HttpStatus {
-  public static readonly OK: number = 200;
-  public static readonly Created: number = 201;
-  public static readonly Accepted: number = 202;
-  public static readonly Bad_Request: number = 400;
-  public static readonly Not_Found: number = 404;
-  public static readonly Internal_Server_Error: number = 500;
+/* eslint-disable no-unused-vars */
+enum HttpStatus {
+  OK = 200,
+  Created = 201,
+  Accepted = 202,
+  Bad_Request = 400,
+  Not_Found = 404,
+  Internal_Server_Error = 500
 }
+
+export default HttpStatus;

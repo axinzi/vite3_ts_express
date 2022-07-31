@@ -1,3 +1,4 @@
+import HttpStatus from '@/common/HttpStatus';
 import { Router } from 'express';
 const router: Router = require('express-promise-router')();
 
@@ -6,7 +7,7 @@ router.route('/')
     const data = {
       message: 'hi qq'
     };
-    res.status(200).json(data);
+    res.status(HttpStatus.OK).json(data);
   });
 
 router.route('/:userId')
@@ -15,7 +16,7 @@ router.route('/:userId')
     const data = {
       userId
     };
-    res.status(200).json(data);
+    res.status(HttpStatus.OK).json(data);
   });
 
 export default router;
