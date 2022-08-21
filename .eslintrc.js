@@ -6,7 +6,7 @@ const eslintRules = {
   'no-template-curly-in-string': 1,  // 禁止，常规字符串使用模板字符串写法```
 
   // 未分类
-  'no-unused-vars': 1,  // 禁止，声明后未使用的变量
+  'no-unused-vars': 0,  // 禁止，声明后未使用的变量
   'no-useless-return': 1,  // 禁止，多余的 return
   // "eqeqeq": 1, // 警告，全等代替相等
 
@@ -18,7 +18,7 @@ const eslintRules = {
   'block-spacing': [1, 'always'],  // 要求，代码块，大括号内侧需要空格
   'brace-style': [1, '1tbs', { allowSingleLine: true }],  // 要求，代码块，1tbs风格
 
-  camelcase: 1,  // 要求，标识符 驼峰命名
+  camelcase: 0,  // 禁止，标识符 驼峰命名
   // "capitalized-comments": 0,  // 禁止，注释的第一个字母大写
   'comma-dangle': [1, 'never'],  // 禁止，对象与数组，使用拖尾逗号
   'comma-spacing': 1,  // 禁止，逗号前空格，要求，逗号后空格
@@ -156,5 +156,6 @@ module.exports = {
   rules: {
     ...eslintRules,
     '@typescript-eslint/no-var-requires': 0
+
   }
 };
