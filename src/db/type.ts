@@ -1,8 +1,6 @@
 export enum ETables {
   users = 'users',
 }
-
-export type TTableUsersRow = Partial<ITableUsersRow>
 export interface ITableUsersRow extends Record<string, string | number> {
   user_id: string;
   user_name: string;

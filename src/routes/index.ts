@@ -1,4 +1,5 @@
 import { Express } from 'express';
+import check from '@/routes/check';
 import home from '@/routes/home';
 import qq from '@/routes/qq';
 import HttpStatus from '@/common/HttpStatus';
@@ -10,6 +11,7 @@ function routes(app: Express): void {
     res.on('finish', () => console.log(`${method}-${path}`));
     next();
   });
+  app.use('/api/v1/check', check);
   app.use('/api/v1/home', home);
   app.use('/api/v1/qq', qq);
   // 未匹配到路由
